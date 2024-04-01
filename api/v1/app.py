@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""
-The RESTful api starts here aids data access in the app.
-"""
+"""Defines flask aplications"""
 
 from models import storage
 from os import getenv
-from flask import Flask, jsonify
-from flask_cors import CORS
 from api.v1.views import app_views
+from flask import Flask, jsonify, abort
+from flask_cors import CORS
 
 app = Flask(__name__)
 
